@@ -1,0 +1,76 @@
+syntax = "proto3";
+
+message TestRequest{
+    string name = 1;
+}
+
+message TestReply{
+    string reply = 1;
+}
+
+
+message Record{
+     string id = 1;
+     string message = 2;
+     float timestamp = 3;
+}
+
+message RecordRequest{
+     string id = 1;
+}
+
+message RecordResponse{
+    bool doesExist = 1;
+    Record record = 2;
+}
+
+message RecordsRequest{
+}
+
+message RecordsResponse{
+    repeated Record request = 1;
+}
+
+message UpdateRequest{
+     string id = 1;
+     string message = 2;
+}
+
+message UpdateResponse{
+    bool isDone = 1;
+     
+}
+
+message WriteRequest{
+     Record record = 1;
+}
+
+message WriteResponse {
+    bool isDone = 1;
+     
+}
+
+message DeleteRequest{
+     string id = 1;
+     string message = 2;
+}
+
+message DeleteResponse{
+    bool isDone = 1;
+     
+}
+
+message CleanRequest{}
+message CleanResponse{
+    bool isDone = 1;
+}
+
+service gRPCService {
+    rpc Test (TestRequest) returns (TestReply){}
+    rpc AddRecord (WriteRequest) returns (WriteResponse){}
+    rpc GetRecords (RecordsRequest) returns (stream Record){}
+    rpc GetRecord (RecordRequest) returns (RecordResponse){}
+    rpc UpdateRecord (UpdateRequest) returns (UpdateResponse){}
+    rpc DeleteRecord (DeleteRequest) returns (DeleteResponse){}
+    rpc CleanTable(CleanRequest) returns (CleanResponse){}
+}

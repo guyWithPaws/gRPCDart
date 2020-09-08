@@ -1,0 +1,23 @@
+name: dart_grpc_sample
+description: Sample Client-Server gRPC struct
+# version: 1.0.0
+# homepage: https://www.example.com
+
+environment:
+  sdk: '>=2.9.2 <3.0.0'
+
+dependencies:
+  l: ^1.1.1
+  equatable: ^1.2.4
+  bloc: any
+  postgres: ^2.1.1
+  firebase: ^7.3.0
+  grpc: ^2.2.0
+  graphql: ^3.0.0
+  appengine: ^0.12.0
+  protobuf: ^1.0.1
+
+dev_dependencies:
+  pedantic: ^1.9.2
+  analyzer: ^0.39.17
+  test: ^1.14.4

@@ -1,0 +1,6 @@
+runtime: custom
+env: flex
+service: default
+#Use this string because without it server won't launch in App Engine
+automatic_scaling:
+    max_num_instances: 8
