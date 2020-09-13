@@ -2,13 +2,14 @@ import 'dart:io';
 import 'generated/calls.pbgrpc.dart';
 import 'package:grpc/grpc.dart';
 
-
 //TODO: Implement business logic with BLoC instead of this
 void run() async {
   final channel = ClientChannel(
-    'http://34.65.22.133/',
+    'localhost',
     port: 8080,
-    options: const ChannelOptions(credentials: ChannelCredentials.insecure(),),
+    options: const ChannelOptions(
+      credentials: ChannelCredentials.insecure(),
+    ),
   );
   final stub = gRPCServiceClient(channel);
 
@@ -16,7 +17,8 @@ void run() async {
   bool isRunning = true;
 
   while (isRunning) {
-    print('[1]: Read all records, [2]: Read a record by ID, [3]: Create a record, [4]: Update the record, [5]: Delete the record, [6]: Clean the table, [Q/q]: Exit ');
+    print(
+        '[1]: Read all records, [2]: Read a record by ID, [3]: Create a record, [4]: Update the record, [5]: Delete the record, [6]: Clean the table, [Q/q]: Exit ');
     final data = stdin.readLineSync();
     switch (data) {
       case 't':

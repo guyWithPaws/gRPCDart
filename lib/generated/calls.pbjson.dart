@@ -39,7 +39,14 @@ const RecordResponse$json = const {
   '1': 'RecordResponse',
   '2': const [
     const {'1': 'doesExist', '3': 1, '4': 1, '5': 8, '10': 'doesExist'},
-    const {'1': 'record', '3': 2, '4': 1, '5': 11, '6': '.Record', '10': 'record'},
+    const {
+      '1': 'record',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.Record',
+      '10': 'record'
+    },
   ],
 };
 
@@ -50,7 +57,14 @@ const RecordsRequest$json = const {
 const RecordsResponse$json = const {
   '1': 'RecordsResponse',
   '2': const [
-    const {'1': 'request', '3': 1, '4': 3, '5': 11, '6': '.Record', '10': 'request'},
+    const {
+      '1': 'request',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.Record',
+      '10': 'request'
+    },
   ],
 };
 
@@ -72,7 +86,14 @@ const UpdateResponse$json = const {
 const WriteRequest$json = const {
   '1': 'WriteRequest',
   '2': const [
-    const {'1': 'record', '3': 1, '4': 1, '5': 11, '6': '.Record', '10': 'record'},
+    const {
+      '1': 'record',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.Record',
+      '10': 'record'
+    },
   ],
 };
 
@@ -108,4 +129,3 @@ const CleanResponse$json = const {
     const {'1': 'isDone', '3': 1, '4': 1, '5': 8, '10': 'isDone'},
   ],
 };
-
